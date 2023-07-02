@@ -1,0 +1,64 @@
+<div style="display: flex">
+  <div class="grid-container">
+    <div class="grid-item">
+      <div style="padding: 10px 0px 0px 10px">Frontend Dev</div>
+      <ul>
+        Angular
+        <li>Development of dashboards using Angular framework.</li>
+        <li>Utilized Razorpay for payment integration.</li>
+        <li>Implemented micro front-end architecture.</li>
+        <li>Developed dynamic components.</li>
+        <li>Proficient in building applications from scratch.</li>
+      </ul>
+
+      <ul>
+        React
+        <li>Developed an e-commerce website using React.</li>
+        <li>Created a chatbot for interactive customer support.</li>
+        <li>Designed the interface for a logistics app.</li>
+      </ul>
+      <br />
+    </div>
+    <div class="grid-item">
+      <div style="padding: 10px 0px 0px 10px">Backend Dev</div>
+      <ul>
+        Node.js
+        <li>Worked on developing APIs.</li>
+        <li>Implemented functionality to generate and download reports.</li>
+      </ul>
+      <ul>
+        Django
+        <li>
+          Developed 5-10 APIs for feature development using Django framework.
+        </li>
+        <li>
+          Familiar with Jinja template engine and Django's ORM
+          (Object-Relational Mapping).
+        </li>
+      </ul>
+      <br />
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="card" *ngFor="let item of skills">
+      <div
+        class="percent"
+        style="--clr:{{ item.color }};--num:{{ item.score }}"
+      >
+        <div class="dot">🟢</div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2>
+            {{ item.score }}
+            <span>%</span>
+          </h2>
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,16 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   {
-    path:'',component:HomeComponent
+    path: '', component: HomeComponent,
+    data: { title: '' }
   },
   {
-    path:'about',component:AboutComponent
+    path: 'about', component: AboutComponent,
+    data: { title: 'About Me', }
   },
   {
-    path:'expertise',component:SkillsComponent
+    path: 'expertise', component: SkillsComponent,
+    data: { title: "My Expertise", }
+  },
+  {
+    path: 'education', component: WorkComponent,
+    data: { title: "Education & Experience", }
   }
 ];
 

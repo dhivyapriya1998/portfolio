@@ -22,10 +22,11 @@ const routes: Routes = [
     path: 'education', component: WorkComponent,
     data: { title: "Education & Experience", }
   }
+ 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
